@@ -89,16 +89,16 @@ hr {
 }
 
 .panel {
-	background-color: #161616;
-	border: 0px;
+  background-color: #161616;
+  border: 0px;
 }
 
 .panel-title {
-	color: #FFF;
+  color: #FFF;
 }
 
 .panel-body p {
-	color: #CCC;
+  color: #CCC;
 }
 
 .medium-icon {
@@ -109,8 +109,8 @@ hr {
 
 #work, #about, #team, 
 #portfolio, #plan, #contact {
-	padding-top: 120px;
-	padding-bottom: 100px;
+  padding-top: 120px;
+  padding-bottom: 100px;
 }
 
 #team, #portfolio, #contact {
@@ -198,8 +198,8 @@ hr {
 }    
 
 .custom-navbar .nav li a {
-	display: block;
-	padding: 15px 20px;
+  display: block;
+  padding: 15px 20px;
     color: #ffffff;
     font-size: 12px;
     font-weight: 400;
@@ -311,7 +311,7 @@ hr {
   margin-bottom: 20px;
 }
 .slider-caption p {
-	font-size: 26px;
+  font-size: 26px;
 }
 
 #bx-pager a {
@@ -845,7 +845,7 @@ footer h2 {
 
 @media (max-width: 767px) {
   .site-slider {
-    padding-top: 50px;
+    padding-top: 10px;
   }
   #plan .plan {
     padding-right: 0;
