@@ -1074,7 +1074,7 @@
         el.goToSlide = function (slideIndex, direction) {
 
             //Changing the video
-            changeVideo(defaults.videosList[slideIndex]);
+           
 
             // if plugin is currently in motion, ignore request
             if (slider.working || slider.active.index == slideIndex) return;
@@ -1110,7 +1110,8 @@
 //                if (slider.settings.adaptiveHeight && slider.viewport.height() != getViewportHeight()) {
 //                    slider.viewport.animate({height: getViewportHeight()}, slider.settings.adaptiveHeightSpeed);
 //                }
-                slider.children.filter(':visible').fadeOut(slider.settings.speed).css({zIndex: 0});
+
+                slider.children.filter(':visible').fadeOut(slider.settings.speed,function(){ changeVideo(defaults.videosList[slider.active.index]);}).css({zIndex: 0});
                 // fade in the newly requested slide
                 slider.children.eq(0).css('zIndex', 51).fadeIn(slider.settings.speed, function () { $(this).css('zIndex', 50);
                     slider.working = false;
