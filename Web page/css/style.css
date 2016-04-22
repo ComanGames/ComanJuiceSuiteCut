@@ -244,6 +244,10 @@ hr {
         border-bottom: 2px solid transparent !important;
         color: #ffa400;
     }
+   .bx-controls {
+        top: 50px!important;
+}
+
 
 }
 
@@ -329,28 +333,50 @@ hr {
 }
 
 .bx-controls {
-  position: relative;
+  position: absolute;
+    height:calc(100% - 83px);
+    width: calc(100vw - 15px);
+    top: 83px;
 }
 
 .bx-controls-direction {
-  position: absolute;
-  text-align: right;
-  bottom: 80px;
-  right: -2px;
-  z-index: 998;
+    /* display: table-cell; */
+    width: 100%;
+    right: 0;
+    height: 11vw;
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    /* z-index: 100; */
+    padding-left: 3%;
+    padding-right: 3%;
 }
 .bx-controls-direction a {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(106, 106, 106, 0.51);
-  text-decoration: none;
-  display: block;
-  float: left;
-  margin-right: 20px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 20px;
-  color: white;
+width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.37);
+    box-sizing: content-box;
+    text-decoration: initial;
+    display: block;
+    float: left;
+    margin-right: 2px;
+    line-height: 9.5vw;
+    text-align: -webkit-center;
+    font-size: 9vw;
+    color: rgba(255, 255, 255, 0.48);
+    z-index: 100;
+    position: relative;
+}
+.bx-controls-direction .fa-angle-left {
+    display: inline-block;
+    float: left;
+}
+.bx-controls-direction .fa-angle-right {
+    display: inline-block;
+    float: right;
+
 }
 
 
@@ -767,7 +793,6 @@ footer h2 {
   }
 
   .bx-controls-direction {
-    bottom: 30px;
   }
 }
 
@@ -780,7 +805,6 @@ footer h2 {
   font-size: 18px;
   }
   .bx-controls-direction {
-    right: 30px;
   }
   .slider-caption {
     display: none;

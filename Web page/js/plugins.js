@@ -54,7 +54,7 @@
 
         // AUTO
         auto: false,
-        pause: 4000,
+        pause: 400,
         autoStart: true,
         autoDirection: 'next',
         autoHover: false,
@@ -622,6 +622,7 @@
          */
         var appendControls = function () {
             slider.controls.next = $('<a class="bx-next" href="">' + slider.settings.nextText + '</a>');
+            height: 
             slider.controls.prev = $('<a class="bx-prev" href="">' + slider.settings.prevText + '</a>');
             // bind click actions to the controls
             slider.controls.next.bind('click', clickNextBind);
