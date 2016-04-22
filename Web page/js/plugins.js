@@ -1196,6 +1196,7 @@
          * Transitions to the next slide in the show
          */
         el.goToNextSlide = function () {
+            pauseVideo();
             // if infiniteLoop is false and last page is showing, disregard call
             if (!slider.settings.infiniteLoop && slider.active.last) return;
             var pagerIndex = parseInt(slider.active.index) + 1;
