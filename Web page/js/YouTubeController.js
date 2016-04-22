@@ -23,7 +23,6 @@ function onPlayerReady(event) {
 var done = false;
 function onPlayerStateChange(event) {
     if (event.data === window.YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 6000);
         done = true;
     }
 }
@@ -34,16 +33,13 @@ function setVideo(videoName) {
         events: { 'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange }
     });
 }
-function startVideo() {
-    if(player!=null)
-    player.startVideo();
+
+function changeVideo( videoId) {
+    player.loadVideoById(videoId);
 }
 
 function pauseVideo() {
-    window.alert('Hello');
-    if (player != null) {
-//        play.pauseVideo();
-    }
+    player.stopVideo();
 }
 function stopVideo() {
     player.stopVideo();
