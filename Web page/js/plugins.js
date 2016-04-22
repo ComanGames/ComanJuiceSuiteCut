@@ -782,35 +782,6 @@
         /**
          * Performs needed actions after a slide transition
          */
-        var updateAfterSlideTransition = function () {
-            // if infinte loop is true
-            if (slider.settings.infiniteLoop) {
-                var position = '';
-                // first slide
-                if (slider.active.index == 0) {
-                    // set the new position
-                    position = slider.children.eq(0).position();
-                    // carousel, last slide
-                } else if (slider.active.index == getPagerQty() - 1 && slider.carousel) {
-                    position = slider.children.eq((getPagerQty() - 1) * getMoveBy()).position();
-                    // last slide
-                } else if (slider.active.index == slider.children.length - 1) {
-                    position = slider.children.eq(slider.children.length - 1).position();
-                }
-                if (slider.settings.mode == 'horizontal') {
-                    setPositionProperty(-position.left, 'reset', 0);
-                    ;
-                }
-                else if (slider.settings.mode == 'vertical') {
-                    setPositionProperty(-position.top, 'reset', 0);
-                    ;
-                }
-            }
-            // declare that the transition is complete
-            slider.working = false;
-            // onSlideAfter callback
-            slider.settings.onSlideAfter(slider.children.eq(slider.active.index), slider.oldIndex, slider.active.index);
-        }
 
         /**
          * Updates the auto controls state (either active, or combined switch)
@@ -1135,66 +1106,20 @@
             // // check for direction control update
             if (slider.settings.controls) updateDirectionControls();
             // if slider is set to mode: "fade"
-            if (slider.settings.mode == 'fade') {
                 // if adaptiveHeight is true and next height is different from current height, animate to the new height
-                if (slider.settings.adaptiveHeight && slider.viewport.height() != getViewportHeight()) {
-                    slider.viewport.animate({height: getViewportHeight()}, slider.settings.adaptiveHeightSpeed);
-                }
-                // fade out the visible child and reset its z-index value
+//                if (slider.settings.adaptiveHeight && slider.viewport.height() != getViewportHeight()) {
+//                    slider.viewport.animate({height: getViewportHeight()}, slider.settings.adaptiveHeightSpeed);
+//                }
                 slider.children.filter(':visible').fadeOut(slider.settings.speed).css({zIndex: 0});
                 // fade in the newly requested slide
-                slider.children.eq(slider.active.index).css('zIndex', 51).fadeIn(slider.settings.speed, function () {
-                    $(this).css('zIndex', 50);
-                    updateAfterSlideTransition();
+                slider.children.eq(0).css('zIndex', 51).fadeIn(slider.settings.speed, function () { $(this).css('zIndex', 50);
+                    slider.working = false;
                 });
                 // slider mode is not "fade"
-            } else {
-                // if adaptiveHeight is true and next height is different from current height, animate to the new height
-                if (slider.settings.adaptiveHeight && slider.viewport.height() != getViewportHeight()) {
-                    slider.viewport.animate({height: getViewportHeight()}, slider.settings.adaptiveHeightSpeed);
-                }
-                var moveBy = 0;
-                var position = {left: 0, top: 0};
-                // if carousel and not infinite loop
-                if (!slider.settings.infiniteLoop && slider.carousel && slider.active.last) {
-                    if (slider.settings.mode == 'horizontal') {
-                        // get the last child position
-                        var lastChild = slider.children.eq(slider.children.length - 1);
-                        position = lastChild.position();
-                        // calculate the position of the last slide
-                        moveBy = slider.viewport.width() - lastChild.outerWidth();
-                    } else {
-                        // get last showing index position
-                        var lastShowingIndex = slider.children.length - slider.settings.minSlides;
-                        position = slider.children.eq(lastShowingIndex).position();
-                    }
-                    // horizontal carousel, going previous while on first slide (infiniteLoop mode)
-                } else if (slider.carousel && slider.active.last && direction == 'prev') {
-                    // get the last child position
-                    var eq = slider.settings.moveSlides == 1 ? slider.settings.maxSlides - getMoveBy() : ((getPagerQty() - 1) * getMoveBy()) - (slider.children.length - slider.settings.maxSlides);
-                    var lastChild = el.children('.bx-clone').eq(eq);
-                    position = lastChild.position();
-                    // if infinite loop and "Next" is clicked on the last slide
-                } else if (direction == 'next' && slider.active.index == 0) {
-                    // get the last clone position
-                    position = el.find('> .bx-clone').eq(slider.settings.maxSlides).position();
-                    slider.active.last = false;
-                    // normal non-zero requests
-                } else if (slideIndex >= 0) {
-                    var requestEl = slideIndex * getMoveBy();
-                    position = slider.children.eq(requestEl).position();
-                }
-
-                /* If the position doesn't exist
-                 * (e.g. if you destroy the slider on a next click),
-                 * it doesn't throw an error.
-                 */
-                if ("undefined" !== typeof(position)) {
-                    var value = slider.settings.mode == 'horizontal' ? -(position.left - moveBy) : -position.top;
-                    // plugin values to be animated
-                    setPositionProperty(value, 'slide', slider.settings.speed);
-                }
-            }
+                // fade out the visible child and reset its z-index value
+//                slider.children.filter(':visible').fadeOut(slider.settings.speed, function () { changeVideo(slider.videosList[slider.active.index]) });
+//                // fade in the newly requested slide
+//                slider.children.eq(0).fadeIn(slider.settings.speed, function () { });
         }
 
         /**
