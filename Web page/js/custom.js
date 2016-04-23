@@ -39,7 +39,9 @@ $(document).ready(function() {
       pagerCustom: '#bx-pager',
       mode: 'fade',
       nextText: '',
-      prevText: ''
+      prevText: '',
+        speed: 500,
+
     });
   }
 
