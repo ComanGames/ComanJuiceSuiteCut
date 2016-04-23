@@ -32,15 +32,13 @@ $(document).ready(function() {
   'use strict';
 
   // Cache document for fast access.
-  var document = window.document;
-
-  function mainSlider() {
+      function mainSlider() {
     $('.bxslider').bxSlider({
       pagerCustom: '#bx-pager',
       mode: 'fade',
       nextText: '',
       prevText: '',
-        speed: 500,
+        speed: 500
 
     });
   }
@@ -69,7 +67,7 @@ $(document).ready(function() {
           items: 3,
           paginationSpeed: 3000,
       itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3],
+      itemsDesktopSmall : [979,3]
     });
   });
   
@@ -90,13 +88,10 @@ $(document).ready(function() {
   /* Nivo lightbox
     -----------------------------------------------*/
   $('#portfolio .col-md-4 a').nivoLightbox({
-        effect: 'fadeScale',
+        effect: 'fadeScale'
     });
 
 
-  /* wow
-  -------------------------------*/
-  new WOW({ mobile: false }).init();
 
   });
 

@@ -11,7 +11,7 @@ var currentVideoIndex = 0;
 //    after the API code downloads.
 var player;
 function onYouTubeIframeAPIReady() {
-    setPlayer('PUoLUaeypm8');
+    setPlayer(videosList[0]);
 }
 
 var isFirst = true;
