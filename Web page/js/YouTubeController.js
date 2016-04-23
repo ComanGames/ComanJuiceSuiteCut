@@ -19,7 +19,7 @@ var isFirst = true;
 function onPlayerReady(event) {
     if(isFirst) {
         event.target.playVideo();
-        player.
+        player.setVolume(50);
         isFirst = false;
 
     }//    event.target.SHOW_TEXT = 0;
@@ -40,6 +40,7 @@ function goToNext() {
 }
 function setPlayer(videoName) {
     player = new window.YT.Player('player', {
+        playerVars: { 'showinfo': 0, 'controls': 0 },
         videoId: videoName,
         events: { 'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange }
     });
