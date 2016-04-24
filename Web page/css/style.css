@@ -843,7 +843,7 @@ footer h2 {
 
 @media (max-width: 767px) {
   .site-slider {
-    padding-top: 10px;
+    padding-top: 0px;
   }
   #plan .plan {
     padding-right: 0;
