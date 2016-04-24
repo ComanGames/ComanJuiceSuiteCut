@@ -18,7 +18,7 @@ var isFirst = true;
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
     if(isFirst) {
-        event.target.playVideo();
+        playVideo();
         player.setVolume(50);
         isFirst = false;
 
