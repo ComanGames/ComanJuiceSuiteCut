@@ -85,7 +85,6 @@
 <!-- Navigation section
 ================================================== -->
 <section class="navbar navbar-fixed-top custom-navbar" role="navigation">
-
 	<div class="container">
 
 		<div class="navbar-header">
@@ -96,8 +95,6 @@
 			</button>
 			<a href="#home" class="smoothScroll navbar-brand">COMAN JUICE</a>
 		</div>
-
-
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
             
@@ -108,24 +105,12 @@
 				<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
                 <li><a target="_blank" href="https://comangames.wordpress.com/" class="smoothScroll">BLOG</a></li>
                 <li><a target="_blank"  href="https://www.facebook.com/coman.games/" class="smoothScroll">GALERY</a></li>
+                <li><a onclick="ReDirect('/ru')" class="smoothScroll">RU</a></li>
+                <li><a onclick="ReDirect('/ua')" class="smoothScroll">UA</a></li>
 			</ul>
 		</div>
 
-        <div class="dropdown language-button-container">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                EN
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">RU</a></li>
-                <li><a href="#">UA</a></li>
-            </ul>
-        </div>
-<!--	    <div class="language-button-container">-->
-<!--            <button onclick="ReDirect('/ru')" class="language-button">RU</button>-->
-<!--            <button onclick="ReDirect('/ua')" class="language-button">UA</button>-->
-<!--	</div>-->
-        </div>
+	</div>
 </section>
 
 
@@ -273,25 +258,24 @@
                         <!--<h5 class="wow bounceIn">COMAN JUICES</h5>-->
                         <h1 class="heading color-white">PLANS</h1>
                         <hr>
-                        <p class="color-white">Choose convenient plan according to your needs and budget. Fill up your plan with items from the list of services below</p>
+                        <p class="color-white">Choose convenient plan according to your needs and budget.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="plan">
-                        <h2 class="plan-title">ELEMENTARY</h2>
+                        <h2 class="plan-title">BASIC</h2>
                         <div class="plan-price">
-                            <h1 class="plan-price-title">$200<small></small></h1>
+                            <h1 class="plan-price-title">$250<small></small></h1>
                         </div>
                         <ul class="plan-list">
-                            <li>Template cartoon or</li>
-                            <li>Template presentation or</li>
-                            <li>Video Slideshow or</li>
-                            <li>Logo animation or</li>
-                            <li>Soundtrack</li>
+                            <li>4 days 3 nights</li>
+                            <li>Explore Forest</li>
+                            <li>Visit Waterfalls</li>
+                            <li>Group of 10 people</li>
                         </ul>
-                        <div  class="plan-button">
-                            <button  class="btn btn-default">CHOOSE PLAN</button>
+                        <div class="plan-button">
+                            <button class="btn btn-default">CHOOSE PLAN</button>
                         </div>
                     </div>
                 </div>
@@ -300,13 +284,13 @@
                     <div class="plan">
                         <h2 class="plan-title">ADVANCED</h2>
                         <div class="plan-price">
-                            <h1 class="plan-price-title">$400 <small></small></h1>
+                            <h1 class="plan-price-title">$350 <small></small></h1>
                         </div>
                         <ul class="plan-list">
-                            <li>1 item from Elementary +</li>
-                            <li>4 items from Basic +</li>
-                            <li>3 items from Essential</li>
-                            
+                            <li>8 days 7 nights</li>
+                            <li>Explore Mountains</li>
+                            <li>Touring Villages</li>
+                            <li>Group of 15 people</li>
                         </ul>
                         <div class="plan-button">
                             <button class="btn btn-default">CHOOSE PLAN</button>
@@ -318,13 +302,13 @@
                     <div class="plan">
                         <h2 class="plan-title">PROFICIENT</h2>
                         <div class="plan-price">
-                            <h1 class="plan-price-title">$12/sec. <small></small></h1>
+                            <h1 class="plan-price-title">$500 <small></small></h1>
                         </div>
                         <ul class="plan-list">
-                            <li>Strongly personalized</li>
-                            <li>unique</li>
-                            <li>cartoon or presentation +</li>
-                            <li>any 5 items from Basic, Essential and Proficient Services</li>
+                            <li>12 days 11 nights</li>
+                            <li>Multiple Cities</li>
+                            <li>Unique Experiences</li>
+                            <li>Group of 20 people</li>
                         </ul>
                         <div class="plan-button">
                             <button class="btn btn-default">CHOOSE PLAN</button>
@@ -332,21 +316,6 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="plan">
-                        <h2 class="plan-title">VIP</h2>
-                        <div class="plan-price">
-                            <h1 class="plan-price-title">$25/sec. <small></small></h1>
-                        </div>
-                        <ul class="plan-list">
-                            <li>Any items from the list</li>
-                            
-                        </ul>
-                        <div class="plan-button">
-                            <button class="btn btn-default">CHOOSE PLAN</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -359,262 +328,114 @@
 
 			<!-- Section title
 			================================================== -->
-		    <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
-		        <div class="section-title">
-		            <!--<h5 class="wow bounceIn"></h5>-->
-		            <h1 class="heading">OUR SERVICES</h1>
-		            <hr>
-		            <p>Pick up these features to build impressive project. Click on the photos to see our projects concerned with area of your interest.</p>
-		        </div>
-		        </div>
-            <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8"><h5 class="wow bounceIn">ELEMENTARY</h5></div>
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+				<div class="section-title">
+					<h5 class="wow bounceIn">WE ARE DELIGENT</h5>
+					<h1 class="heading">SHOWCASE</h1>
+					<hr>
+					<p>Pellentesque mollis purus ipsum. Fusce tristique ante et est placerat dignissim. Curabitur tincidunt risus non dui vulputate tincidunt.</p>
+				</div>
+			</div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="grid">
-                        <figure class="effect-zoe">
-                            <img src="/images/portfolio-img1.jpg" alt="portfolio img" />
-                            <figcaption>
-                                <h2>Template Cartoon</h2>
-                                <p class="icon-links">
-                                    <a href="/images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                </div>
-
-		    <div class="col-md-4 col-sm-6">
-
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/portfolio-img2.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Template Presentation</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
-            <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8"><h5 class="wow bounceIn">BASIC</h5></div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="grid">
-                        <figure class="effect-zoe">
-                            <img src="/images/portfolio-img3.jpg" alt="portfolio img" />
-                            <figcaption>
-                                <h2>Video Slideshow</h2>
-                                <p class="icon-links">
-                                    <a href="/images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                </div>
-
-		    <div class="col-md-4 col-sm-6">
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/portfolio-img4.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Soundtrack</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
-		    <div class="col-md-4 col-sm-6">
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/portfolio-img4.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Logo Animation</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
-		    <div class="col-md-4 col-sm-6">
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/portfolio-img4.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Narrator's voice</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
             <div class="col-md-4 col-sm-6">
-                <div class="grid">
-                    <figure class="effect-zoe">
-                        <img src="/images/portfolio-img4.jpg" alt="portfolio img" />
-                        <figcaption>
-                            <h2>Unique Scripting</h2>
-                            <p class="icon-links">
-                                <a href="/images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-		    <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8"><h5 class="wow bounceIn">ESSENTIAL</h5>
-		    </div>
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="/images/portfolio-img1.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>Mobile App</h2>
+								<p class="icon-links">
+									<a href="/images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div>   
 
-		    <div class="col-md-4 col-sm-6">
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/portfolio-img5.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Infographic Elements</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
-		    <div class="col-md-4 col-sm-6">
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/portfolio-img5.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Creative Design</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
-		    <div class="col-md-4 col-sm-6">
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/portfolio-img5.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Sound Effects</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
-		    <div class="col-md-4 col-sm-6">
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/portfolio-img5.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Typographic Elements</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
             <div class="col-md-4 col-sm-6">
-                <div class="grid">
-                    <figure class="effect-zoe">
-                        <img src="/images/portfolio-img5.jpg" alt="portfolio img" />
-                        <figcaption>
-                            <h2>Live Photography</h2>
-                            <p class="icon-links">
-                                <a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8"><h5 class="wow bounceIn">PROFICIENT</h5></div>
-		<div class="col-md-4 col-sm-6">
-		    <div class="grid">
-		        <figure class="effect-zoe">
-		            <img src="/images/portfolio-img6.jpg" alt="portfolio img"/>
-		            <figcaption>
-		                <h2>Exclusive Cartoon</h2>
-		                <p class="icon-links">
-		                    <a href="/images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                </p>
-		            </figcaption>
-		        </figure>
-		    </div>
-		</div>
-		<div class="col-md-4 col-sm-6">
-		    <div class="grid">
-		        <figure class="effect-zoe">
-		            <img src="/images/portfolio-img5.jpg" alt="portfolio img"/>
-		            <figcaption>
-		                <h2>3D Photorealistic Video</h2>
-		                <p class="icon-links">
-		                    <a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                </p>
-		            </figcaption>
-		        </figure>
-		    </div>
-		</div>
-		<div class="col-md-4 col-sm-6">
-		    <div class="grid">
-		        <figure class="effect-zoe">
-		            <img src="/images/portfolio-img5.jpg" alt="portfolio img"/>
-		            <figcaption>
-		                <h2>3D Cartoon</h2>
-		                <p class="icon-links">
-		                    <a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                </p>
-		            </figcaption>
-		        </figure>
-		    </div>
-		</div>
-		<div class="col-md-4 col-sm-6">
-		    <div class="grid">
-		        <figure class="effect-zoe">
-		            <img src="/images/portfolio-img5.jpg" alt="portfolio img"/>
-		            <figcaption>
-		                <h2>Photo Shooting</h2>
-		                <p class="icon-links">
-		                    <a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                </p>
-		            </figcaption>
-		        </figure>
-		    </div>
-		</div>
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="/images/portfolio-img2.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>Trip Planning</h2>
+								<p class="icon-links">
+									<a href="/images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
+
             <div class="col-md-4 col-sm-6">
-                <div class="grid">
-                    <figure class="effect-zoe">
-                        <img src="/images/portfolio-img5.jpg" alt="portfolio img" />
-                        <figcaption>
-                            <h2>Live Video Recording</h2>
-                            <p class="icon-links">
-                                <a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="/images/portfolio-img3.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>Scheduling</h2>
+								<p class="icon-links">
+									<a href="/images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
+          	
+          	<div class="col-md-4 col-sm-6">
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="/images/portfolio-img4.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>Arranging</h2>
+								<p class="icon-links">
+									<a href="/images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
 
-                <!-- Portfolio bottom section
-        ================================================== -->
-                <!--<div class="col-md-offset-2 col-md-8 col-sm-12">
-            <div class="portfolio-bottom">
-                <h2>INTERESTED?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit 	amet.</p>
-                <a href="#plan" class="smoothScroll btn btn-default">LET'S GO!</a>
-            </div>
-        </div>-->
+            <div class="col-md-4 col-sm-6">
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="/images/portfolio-img5.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>Organizing</h2>
+								<p class="icon-links">
+									<a href="/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
 
-            </div>
+            <div class="col-md-4 col-sm-6">
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="/images/portfolio-img6.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>Grouping</h2>
+								<p class="icon-links">
+									<a href="/images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
+
+            <!-- Portfolio bottom section
+			================================================== -->
+            <div class="col-md-offset-2 col-md-8 col-sm-12">
+            	<div class="portfolio-bottom">
+            		<h2>INTERESTED?</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit 	amet.</p>
+					<a href="#plan" class="smoothScroll btn btn-default">LET'S GO!</a>
+            	</div>
+            </div>    
+
+		</div>
 	</div>
-</section>
+</section>		
+
+
 
 <!-- Contact section
 ================================================== -->
@@ -659,11 +480,11 @@
 			================================================== -->
 			<div class="contact-detail col-md-12 col-sm-12">
 				<div class="col-md-6 col-sm-6">
-					<h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i>SEND E-MAIL</h3>
+					<h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i> DROP US A LINE</h3>
 					<p>coman.games@outlook.com</p>
 				</div>
 				<div class="col-md-6 col-sm-6">
-					<h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i>CALL US</h3>
+					<h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i>SAY HELLO</h3>
 					<p>+38 (068) 500 41 65</p>
 				</div>
 			</div>
@@ -714,6 +535,5 @@
 <script src="/js/wow.min.js"></script>
 <script src="/js/custom.js"></script>
 <script src="/js/YouTubeController.js"></script>
-<script src ="js/GoogleAnalytics.js"></script>
 </body>
 </html>
