@@ -203,7 +203,25 @@ hr {
     font-size: 16px;
     color: #fff;
 }
+.language-button-container {
+    background: white;
+    float: right;
+    padding: 1px;
+    border-color: red;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
 
+.language-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 1vh 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 .custom-navbar .nav li {
   
 }    

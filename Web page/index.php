@@ -95,12 +95,6 @@
 			</button>
 			<a href="#home" class="smoothScroll navbar-brand">COMAN JUICE</a>
 		</div>
-
-
-	    <div class="language-button-container">
-            <button onclick="ReDirect('/ru')" class="language-button">RU</button>
-            <button onclick="ReDirect('/ua')" class="language-button">UA</button>
-        </div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
             
@@ -111,6 +105,8 @@
 				<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
                 <li><a target="_blank" href="https://comangames.wordpress.com/" class="smoothScroll">BLOG</a></li>
                 <li><a target="_blank"  href="https://www.facebook.com/coman.games/" class="smoothScroll">GALERY</a></li>
+                <li><a onclick="ReDirect('/ru')" class="smoothScroll">RU</a></li>
+                <li><a onclick="ReDirect('/ua')" class="smoothScroll">UA</a></li>
 			</ul>
 		</div>
 
@@ -539,6 +535,5 @@
 <script src="/js/wow.min.js"></script>
 <script src="/js/custom.js"></script>
 <script src="/js/YouTubeController.js"></script>
-<script src ="js/GoogleAnalytics.js"></script>
 </body>
 </html>
