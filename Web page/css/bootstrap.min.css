@@ -3528,12 +3528,13 @@ a.btn.disabled, fieldset[disabled] a.btn {
     background-color: black;
     border-color: black;
 }
-.language-button-container .btn-primary.active, .language-button-container .btn-primary:active, .language-button-container .open > .dropdown-toggle.btn-primary, .language-button-container .btn-primary.active.focus, .language-button-container  .btn-primary.active:focus, .language-button-container  .btn-primary.active:hover,  .language-button-container .btn-primary:active.focus,  .language-button-container .btn-primary:active:focus,  .language-button-container .btn-primary:active:hover,  .language-button-container .open > .dropdown-toggle.btn-primary.focus,  .language-button-container .open > .dropdown-toggle.btn-primary:focus,  .language-button-container .open > .dropdown-toggle.btn-primary:hover {
+.language-button-container .btn-primary.active, .language-button-container .btn-primary:active,  .language-button-conainer .btn-primary:focus:active, .language-button-conainer .btn-primary:focus.active, .language-button-container .open > .dropdown-toggle.btn-primary, .language-button-container .btn-primary.active:focus, .language-button-container  .btn-primary.active:focus, .language-button-container  .btn-primary.active:hover,  .language-button-container .btn-primary:active.focus,  .language-button-container .btn-primary:active:focus,  .language-button-container .btn-primary:active:hover,  .language-button-container .open > .dropdown-toggle.btn-primary.focus,  .language-button-container .open > .dropdown-toggle.btn-primary:focus,  .language-button-container .open > .dropdown-toggle.btn-primary:hover {
+
     color: #fff;
     background-color: black;
     border-color: black;
- 
-
+    border-radius: 0 !important;
+    outline: none !important;
 }
 .language-button-container button:hover{
 
