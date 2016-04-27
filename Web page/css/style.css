@@ -207,6 +207,7 @@ hr {
 
 @media(min-width: 100px) {
     .language-button-container {
+
  position: absolute;
     right: 2px;
     top: 8px;
@@ -216,7 +217,7 @@ hr {
     .language-button-container {
         position: absolute;
         right: 2px;
-        top: 23px;
+        top: 25px;
     }
 }
 .language-button-container .dropdown-menu{
@@ -768,7 +769,9 @@ figure.effect-zoe:hover p.icon-links a:first-child {
     background: #ffffff;
     border: 4px solid #000000;
     position: relative;
-    margin-top: 50px;
+    margin-top: 10px;
+    width: 91%;
+    margin-left: 5vw;
 }
 
 #contact .contact-detail .col-md-6 {

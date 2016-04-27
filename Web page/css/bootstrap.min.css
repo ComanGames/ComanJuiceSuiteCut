@@ -3377,7 +3377,7 @@ select[multiple].input-lg, textarea.input-lg {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -3504,11 +3504,11 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+
+    border: 0px;
 }
 
 .btn-primary .badge {
-    color: #337ab7;
-    background-color: #fff
 }
 
 .btn-success {
@@ -3581,8 +3581,6 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-info {
     color: #fff;
-    background-color: #5bc0de;
-    border-color: #46b8da
 }
 
 .btn-info.focus, .btn-info:focus {
@@ -6117,7 +6115,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:focus, a.list-g
 }
 
 .panel-info > .panel-heading {
-    color: #31708f;
+    color: black;
     background-color: #d9edf7;
     border-color: #bce8f1
 }
