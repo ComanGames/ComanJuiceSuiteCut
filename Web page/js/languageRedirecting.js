@@ -7,10 +7,6 @@ function CheckLanguage(currentLanguage) {
     var browserLanguage = navigator.language || navigator.userLanguage;
     var userLanguage = GetCookie(lastUsedLanguageCookie);
     var wasRedicrected = GetCookie(wasRedirectionCookie);
-    console.log("currentLanguge: " + currentLanguage);
-    console.log("userLanguage: " + userLanguage);
-    console.log("browserLanguage: " + browserLanguage);
-    console.log("wasRedirected: " + wasRedicrected);
 
     //If we was reidrected to this page
     if (wasRedicrected === 'TRUE') {
@@ -92,7 +88,6 @@ function CheckLanguage(currentLanguage) {
 
 }
 function ReDirect(url) {
-    console.log(" I try to redirect you to " + url);
     SetCookie(wasRedirectionCookie, 'TRUE');
     window.location.href = domain+url;
 }
