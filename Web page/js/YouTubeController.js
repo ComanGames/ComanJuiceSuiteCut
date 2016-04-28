@@ -36,7 +36,31 @@ function onPlayerStateChange(event) {
 }
 
 function goToNext() {
-    changeVideo(currentVideoIndex +1);
+    changeVideo(currentVideoIndex+1);
+}
+function goToPrevious() {
+    changeVideo(currentVideoIndex-1);
+}
+
+var volumeStep = 5;
+function MoreVolume() {
+    var currentVolume = player.getVolume();
+    if (currentVolume + volumeStep < 100) {
+        currentVolume = currentVolume + volumeStep;
+    } else {
+        currentVolume = 100;
+    }
+    player.setVolume(currentVolume);
+
+}
+function LessVolume() {
+    var currentVolume = player.getVolume();
+    if (currentVolume - volumeStep > 0) {
+        currentVolume = currentVolume - volumeStep;
+    } else {
+        currentVolume = 0;
+    }
+    player.setVolume(currentVolume);
 }
 function setPlayer(videoName) {
     player = new window.YT.Player('player', {
