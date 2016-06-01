@@ -55,7 +55,6 @@ $(document).ready(function() {
   $(".bx-next").addClass('fa fa-angle-right');
   $(".bx-prev").addClass('fa fa-angle-left');
 
-
   })(window, jQuery);
 
 

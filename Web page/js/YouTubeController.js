@@ -5,7 +5,7 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var videosList = ['PUoLUaeypm8', 'd0uS7T0AMVw', 'JnWkFWXHi-U', 'OFWjkTqR8ss', 'OFWjkTqR8ss'];
+var videosList = ['m73DErjZUDA', 'PUoLUaeypm8', 'z0Estb2lDUA', 'epMYG78crqg', 'zQO9P6z-gLo'];
 var currentVideoIndex = 0;
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
