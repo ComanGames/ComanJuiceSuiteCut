@@ -25,6 +25,19 @@ function onPlayerReady(event) {
     }//    event.target.SHOW_TEXT = 0;
 }
 
+function setMute(isOn) {
+    if (player == null)
+        return;
+    if (isOn) {
+        player.setVolume(50);
+    }
+    else {
+        player.setVolume(1);
+    }
+    
+        
+}
+
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.

@@ -8,6 +8,10 @@ $(window).load(function(){
 
 $(document).ready(function() {
 
+
+    //Create my sound Button
+    CreateSoundButton();
+
   /* Hide mobile menu after clicking on a link
     -----------------------------------------------*/
     $('.navbar-collapse a').click(function(){
