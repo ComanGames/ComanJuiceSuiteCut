@@ -11,6 +11,7 @@ $(document).ready(function() {
 
     //Create my sound Button
     CreateSoundButton();
+    CreateButtons();
 
   /* Hide mobile menu after clicking on a link
     -----------------------------------------------*/
