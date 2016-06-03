@@ -4,3 +4,5 @@ RewriteCond %{HTTP_HOST} ^www.coman-juice.com
 RewriteRule ^(.*)$ http://coman-juice.com/$1 [R=permanent,L]
 
 Redirect 301 /my http://coman-juice.com
+
+AddType application/x-httpd-php5 .html
