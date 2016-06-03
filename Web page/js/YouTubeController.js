@@ -31,7 +31,7 @@ function AddImagesToVideos() {
 
 var isFirst = true;
 // 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
+function onPlayerReady() {
     if (isFirst) {
         playVideo();
         player.setVolume(50);
@@ -42,22 +42,24 @@ function onPlayerReady(event) {
 var thumnailImage;
 function changeImage() {
     var idSource = GetThumbnail(videosList[currentVideoIndex]);
-    if (thumnailImage === null||typeof(thumnailImage)=='undefined') {
-        var player = document.getElementById('player');
-        player.style.display = 'none';
-        var parent = player.parentElement;
+
+    var player = document.getElementById('player');
+    var parent = player.parentElement;
+    if (thumnailImage === null||typeof(thumnailImage) === 'undefined') {
         thumnailImage = document.createElement("img");
         thumnailImage.src = idSource;
         thumnailImage.setAttribute('onclick', 'RemoveThumbnailImage();');
         thumnailImage.alt = "Thumbnail Image";
         thumnailImage.zIndex = 50;
+        player.style.display = 'none';
         thumnailImage.style.display = 'block';
         thumnailImage.style = "cursor:pointer";
         parent.appendChild(thumnailImage);
     } else {
         thumnailImage.src = idSource;
-        thumnailImage.style.visible = true;
+        player.style.display = 'none';
         thumnailImage.style.display = 'block';
+
     }
 }
 
@@ -67,8 +69,9 @@ function RemoveThumbnailImage() {
     setTimeout(function() {
             var player = document.getElementById('player');
             player.style.display = 'block';
-            thumnailImage.style.visibility = "hidden";
-    }, 1000);
+            thumnailImage.style.display = 'none';
+
+    }, 750);
 }
 }
 
@@ -156,16 +159,8 @@ function changeVideo(videoId) {
 
 }
 function GetThumbnail(videoId) {
-    var level =3;
-    while (level>=0) {
-        if (UrlExists(GetThumbnailByQuality(videoId,level))) {
-            return GetThumbnailByQuality(videoId, level);
-        }
-        else {
-            level--;
-        }
-    }
-    throw "No video image find";
+
+        return GetThumbnailByQuality(videoId, 3);
 }
 function GetThumbnailByQuality(videoId,qalityLevel) {
     switch (qalityLevel) {
@@ -180,9 +175,6 @@ function GetThumbnailByQuality(videoId,qalityLevel) {
     }
 }
 
-function UrlExists(url) {
-    return true;
-}
 function playVideo() {
     player.playVideo();
 }
