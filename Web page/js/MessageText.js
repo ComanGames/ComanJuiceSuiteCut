@@ -14,10 +14,8 @@ function CreateButtons() {
     var buttonNew = document.getElementById("btnNew");
     var buttonMid = document.getElementById("btnMid");
     var buttonPro = document.getElementById("btnPro");
-    var oldElement = document.getElementById("SendMessage");
-    var newElement = oldElement.cloneNode(true);
-    oldElement.parentNode.replaceChild(newElement, oldElement);
-    newElement.addEventListener("click", CreateEmail);
+    var el = document.getElementById('SendMessage');
+
 
     switch (document.documentElement.lang) {
     case "uk":
@@ -41,24 +39,15 @@ function CreateButtons() {
 
 }
 
+function SendMessage() {
+    return false;
+}
 function MessageText(text) {
     var messageBox = document.getElementsByName("message")[0];
     messageBox.value = text;
     $("html, body").animate({scrollTop: $("#contact").offset().top }, "slow");
 }
 
-function CreateEmail() {
-    var oldElement = document.getElementById("SendMessage");
-    var newElement = oldElement.cloneNode(true);
-    oldElement.parentNode.replaceChild(newElement, oldElement);
-    newElement.addEventListener("click", CreateEmail);
-
-    var name = document.getElementsByName("name")[0].value;
-    var email = document.getElementsByName("email")[0].value;
-    var text = document.getElementsByName("message")[0].value;
-
-    SendEmail(name, email, text);
-}
 function checkEmail(email) {
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     if (!filter.test(value)) {
@@ -67,11 +56,3 @@ function checkEmail(email) {
     }
     return true;
 }
-function SendEmail(name,email,text) {
-    window.alert(
-        "name: " +name +"\n"
-        +"email: " +email +"\n"
-        +"text: " +text +"\n"
-        );
-}
-

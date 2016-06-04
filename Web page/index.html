@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-
-	<!-- Template site title
+	 <!-- Template site title
    ================================================== -->
 	<title>Coman Juice</title>
 
@@ -11,9 +10,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="video production company">
 	<meta name="description" content="full-fledged video production company focused on providing animation, film and VR services">
-<!--
-
--->
 	<!-- Bootstrap CSS
    ================================================== -->
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -68,12 +64,8 @@
     ================================================== -->
     <link href="https://plus.google.com/110585886991827563238" rel="publisher"/>
 
-
-
-</head>
-
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
+<!--  Asp net -->
 
 <!-- Preloader section
 ================================================== -->
@@ -635,6 +627,9 @@
 						<textarea class="form-control" placeholder="Message" rows="7" name="message" ></textarea>
 					</div>
 					<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+                        <asp:ScriptManager runat="server" EnablePageMethods="true" EnablePartialRendering="true">
+                        </asp:ScriptManager>
+
 						<input  type="submit" class="form-control" value="SEND MESSAGE" id="SendMessage">
 					</div>
 				</form>

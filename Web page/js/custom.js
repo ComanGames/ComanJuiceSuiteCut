@@ -9,18 +9,29 @@ $(window).load(function(){
 $(document).ready(function() {
 
 
-    //Create my sound Button
-    CreateSoundButton();
-    CreateButtons();
-
   /* Hide mobile menu after clicking on a link
     -----------------------------------------------*/
     $('.navbar-collapse a').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
 
+    $('#SendMessage').click(function() {
 
+        $.ajax({
+            type: "POST",
+            url: "Default.aspx/SendEmail",
+            data: '{name: "' + $('input[name=name]') +'",' + 'email: "' +$('input[name=email]')+'",' + 'text: "'+$('textarea[name=message]')+'" }',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success:function() {
+            },
+            failure: function() {
+            }
+        });
+    return false;
+});
   /* jQuery to collapse the navbar on scroll
+
     -----------------------------------------------*/
   $(window).scroll(function() {
       if ($(".navbar").offset().top > 50) {
@@ -31,6 +42,9 @@ $(document).ready(function() {
   });
 
 
+    //Create my sound Button
+    CreateSoundButton();
+    CreateButtons();
   /* BxSlider
     -----------------------------------------------*/
   (function (window, $) {
