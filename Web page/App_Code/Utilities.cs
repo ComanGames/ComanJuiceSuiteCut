@@ -12,6 +12,6 @@ public class Utilities :Page
     [WebMethod]
     public static void SendEmail(string name, string email, string text)
     {
-        Task.Factory.StartNew(() => EmailUtilities.SendEMail(name, email, text));
+        Task.Factory.StartNew(() => EmailUtilities.SendEMail(name, email, text)).Wait();
     }
 }

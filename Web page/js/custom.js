@@ -17,21 +17,57 @@ $(document).ready(function() {
 
     $('#SendMessage').click(function() {
 
-        $.ajax({
-            type: "POST",
-            url: "Default.aspx/SendEmail",
-            data: '{name: "' + $('input[name=name]') +'",' + 'email: "' +$('input[name=email]')+'",' + 'text: "'+$('textarea[name=message]')+'" }',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success:function() {
-                alert("message was send");
-            },
-            failure: function(response) {
-                alert(response.d);
-            }
-        });
-    return false;
+        var email = document.getElementsByName("email")[0].value;
+        var userName = document.getElementsByName("name")[0].value;
+        var userText = document.getElementsByName("message")[0].value;
+        if (email === "" || userName === "" || userText === "") {
+            showMeassage("Fill in name email  and text.");
+            return false;
+        }
+        if (checkEmail(email)!==true) {
+            showMeassage("Please enter valid email address");
+            return false;
+        } else if (checkText(userText) !== true) {
+            showMeassage("Message length min 5 characters");
+            return false;
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: "Default.aspx/SendEmail",
+                data: '{name: "' +userName+ '",' + 'email: "' + email+ '",' + 'text: "'+ userText+ '" }',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function() {
+                },
+                failure: function() {
+                }
+            });
+            sended();
+        }
+        return false;
 });
+
+    function checkEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    } 
+    function checkText(text) {
+        return text.length>5;
+    }
+
+    function showMeassage(text) {
+        $('#messageBox').modal({backdrop: true});
+        $('#messageBoxText').html(text);
+        setTimeout(function() { $('#messageBox').modal('hide'); }, 3000);
+    }
+    function sended() {
+            showMeassage("email is sended");
+            document.getElementsByName("email")[0].value = "";
+            document.getElementsByName("name")[0].value = "";
+            document.getElementsByName("message")[0].value = "";
+
+    }
   /* jQuery to collapse the navbar on scroll
 
     -----------------------------------------------*/

@@ -1,6 +1,6 @@
-﻿using System;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 using System.Threading.Tasks;
+using SendGrid;
 
 namespace EMailSender
 {
@@ -8,14 +8,12 @@ namespace EMailSender
     {
         public static async Task SendEMail(string name, string email, string text)
         {
-            if(String.IsNullOrEmpty(name)&&String.IsNullOrEmpty(email)&&String.IsNullOrEmpty(text))
-                throw new ArgumentException("name or email orText is Empty ");
-            var myMessage = new SendGrid.SendGridMessage();
+            var myMessage = new SendGridMessage();
             myMessage.AddTo("coman.juice@gmail.com");
-            myMessage.From = new MailAddress(email,name);
+            myMessage.From = new MailAddress(email, name);
             myMessage.Subject = "E-mail from web page";
             myMessage.Text = text;
-            var transportWeb = new SendGrid.Web( await GetKey());
+            var transportWeb = new Web(await GetKey());
             await transportWeb.DeliverAsync(myMessage);
         }
         private static async Task<string> GetKey()
