@@ -34,7 +34,7 @@ $(document).ready(function() {
         else {
             $.ajax({
                 type: "POST",
-                url: "Default.aspx/SendEmail",
+                url: "/Default.aspx/SendEmail",
                 data: '{name: "' +userName+ '",' + 'email: "' + email+ '",' + 'text: "'+ userText+ '" }',
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
