@@ -3,19 +3,12 @@
 <head>
 
 	<meta charset="utf-8">
-
-	<!-- Template site title
-   ================================================== -->
 	<title>Coman Juice</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="video production company">
 	<meta name="description" content="full-fledged video production company focused on production animation, film and VR services">
-<!--
-
-
--->
 	<!-- Bootstrap CSS
    ================================================== -->
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -136,6 +129,7 @@
         <ul class="bxslider">
             <li>
             <div class="embed-responsive embed-responsive-16by9">
+                <div id="soundButton"> </div>
                 <div id="player"></div>
             </div>
             </li>
@@ -149,11 +143,11 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div id="bx-pager">
-                            <a data-slide-index="0" href=""><img src="/images/slider/thumb1.jpg" alt="thumbnail 1"/></a>
-                            <a data-slide-index="1" href=""><img src="/images/slider/thumb2.jpg" alt="thumbnail 2"/></a>
-                            <a data-slide-index="2" href=""><img src="/images/slider/thumb3.jpg" alt="thumbnail 3"/></a>
-                            <a data-slide-index="3" href=""><img src="/images/slider/thumb4.jpg" alt="thumbnail 4"/></a>
-                            <a data-slide-index="4" href=""><img src="/images/slider/thumb5.jpg" alt="thumbnail 5"/></a>
+                            <a data-slide-index="0" href=""></a>
+                            <a data-slide-index="1" href=""></a>
+                            <a data-slide-index="2" href=""></a>
+                            <a data-slide-index="3" href=""></a>
+                            <a data-slide-index="4" href=""></a>
                         </div>
                     </div>
                 </div>
@@ -290,7 +284,7 @@
                             <li>САУНДТРЕК</li>
                         </ul>
                         <div  class="plan-button">
-                            <button  class="btn btn-default">ОБРАТИ</button>
+                            <button  class="btn btn-default" id="btnNew">ОБРАТИ</button>
                         </div>
                     </div>
                 </div>
@@ -310,7 +304,7 @@
                             
                         </ul>
                         <div class="plan-button">
-                            <button class="btn btn-default">ОБРАТИ</button>
+                            <button class="btn btn-default" id="btnMid" >ОБРАТИ</button>
                         </div>
                     </div>
                 </div>
@@ -328,7 +322,7 @@
                             <li>будь-які 5 ПУНКТІВ зі СПИСКУ БАЗОВИХ, ОСНОВНИХ та ПРОСУНУТИХ ВИДІВ ПОСЛУГ</li>
                         </ul>
                         <div class="plan-button">
-                            <button class="btn btn-default">ОБРАТИ</button>
+                            <button class="btn btn-default" id="btnPro">ОБРАТИ</button>
                         </div>
                     </div>
                 </div>
@@ -645,7 +639,7 @@
 			<div class="contact-detail col-md-12 col-sm-12">
 				<div class="col-md-6 col-sm-6">
 					<h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i>НАПИСАТИ</h3>
-					<p>coman.games@outlook.com</p>
+					<p>coman.juice@gmail.com</p>
 				</div>
 				<div class="col-md-6 col-sm-6">
 					<h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i>ЗАТЕЛЕФОНУВАТИ</h3>
@@ -674,8 +668,6 @@
                    
 				</ul>
 				<p>Copyright &copy; 2016 COMAN JUICE 
-                
-                <!--| Design: <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></p>-->
 
 			</div>
 		</div>
@@ -687,6 +679,8 @@
 ================================================== -->
 <!-- Language settings-->
 <script src="/js/languageRedirecting.js"></script>
+<script src="/js/MessageText.js"></script>
+<script src="/js/SoundController.js"></script>
 <script>CheckLanguage('uk')</script>
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>

@@ -7022,6 +7022,7 @@ button.close {
 }
 
 @media (min-width: 900px) and (max-width: 991px) {
+
     .visible-sm {
         display: block !important
     }

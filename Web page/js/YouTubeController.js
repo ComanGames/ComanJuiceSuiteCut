@@ -14,15 +14,78 @@ function onYouTubeIframeAPIReady() {
     setPlayer(videosList[0]);
 }
 
+function AddImagesToVideos() {
+    var pegar = document.getElementById('bx-pager');
+    var pegarChilds = pegar.getElementsByTagName("A");
+    for (var i = 0; i < pegarChilds.length; i++) {
+        var pegarImage = document.createElement("img");
+        pegarImage.src = GetThumbnailByQuality(videosList[i],1);
+        pegarImage.className = "slide-picture";
+        pegarImage.alt = "thumbnail "+i;
+        pegarChilds[i].appendChild(pegarImage);
+    }
+
+}
+
+
+
 var isFirst = true;
 // 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-    if(isFirst) {
+function onPlayerReady() {
+    if (isFirst) {
         playVideo();
         player.setVolume(50);
         isFirst = false;
+    } //    event.target.SHOW_TEXT = 0;
+}
 
-    }//    event.target.SHOW_TEXT = 0;
+var thumnailImage;
+function changeImage() {
+    var idSource = GetThumbnail(videosList[currentVideoIndex]);
+
+    var player = document.getElementById('player');
+    var parent = player.parentElement;
+    if (thumnailImage === null||typeof(thumnailImage) === 'undefined') {
+        thumnailImage = document.createElement("img");
+        thumnailImage.src = idSource;
+        thumnailImage.setAttribute('onclick', 'RemoveThumbnailImage();');
+        thumnailImage.alt = "Thumbnail Image";
+        thumnailImage.zIndex = 50;
+        player.style.display = 'none';
+        thumnailImage.style.display = 'block';
+        thumnailImage.style = "cursor:pointer";
+        parent.appendChild(thumnailImage);
+    } else {
+        thumnailImage.src = idSource;
+        player.style.display = 'none';
+        thumnailImage.style.display = 'block';
+
+    }
+}
+
+function RemoveThumbnailImage() {
+    if (thumnailImage != null && typeof (thumnailImage) != 'undefined') {
+        playVideo();
+    setTimeout(function() {
+            var player = document.getElementById('player');
+            player.style.display = 'block';
+            thumnailImage.style.display = 'none';
+
+    }, 750);
+}
+}
+
+function setMute(isOn) {
+    if (player == null)
+        return;
+    if (isOn) {
+        player.setVolume(50);
+    }
+    else {
+        player.setVolume(1);
+    }
+    
+        
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -66,11 +129,15 @@ function setPlayer(videoName) {
     player = new window.YT.Player('player', {
         playerVars: { 'showinfo': 0, 'controls': 0 },
         videoId: videoName,
+        height: '1080',
+        width: '1920',
         events: { 'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange }
     });
 }
 
+
 function changeVideo(videoId) {
+
     if (videoId > videosList.length - 1)
         currentVideoIndex = 0;
     else if (videoId < 0)
@@ -83,11 +150,29 @@ function changeVideo(videoId) {
     }
     player.loadVideoById(videosList[currentVideoIndex]);
     Scroller.updatePaper();
-    if(isPuased) {
+    if (isPuased) {
         player.stopVideo();
-        
+        changeImage();
+    } else {
+        RemoveThumbnailImage();
     }
 
+}
+function GetThumbnail(videoId) {
+
+        return GetThumbnailByQuality(videoId, 3);
+}
+function GetThumbnailByQuality(videoId,qalityLevel) {
+    switch (qalityLevel) {
+    case 3:
+        return '//img.youtube.com/vi/'+videoId+'/maxresdefault.jpg';
+    case 2:
+        return '//img.youtube.com/vi/'+videoId+'/hqdefault.jpg';
+    case 1:
+        return '//img.youtube.com/vi/'+videoId+'/mqdefault.jpg';
+     default : 
+        return '//img.youtube.com/vi/'+videoId+'/default.jpg';
+    }
 }
 
 function playVideo() {

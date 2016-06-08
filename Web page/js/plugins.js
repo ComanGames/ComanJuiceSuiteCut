@@ -116,6 +116,7 @@ var Scroller;
          * Initializes namespace settings to be used throughout plugin
          */
         var init = function () {
+            AddImagesToVideos();
             // merge user-supplied options with the defaults
             slider.settings = $.extend({}, defaults, options);
             // parse slideWidth setting
@@ -175,7 +176,7 @@ var Scroller;
         /**
          * Performs all DOM and CSS modifications
          */
-        var setup = function () {
+        setup = function () {
             // wrap el in a wrapper
             el.wrap('<div class="bx-wrapper"><div class="bx-viewport"></div></div>');
             // store a namspace reference to .bx-viewport
@@ -587,7 +588,11 @@ var Scroller;
                 }
                 // var linkContent = slider.settings.buildPager && $.isFunction(slider.settings.buildPager) ? slider.settings.buildPager(i) : i + 1;
                 // add the markup to the string
-                pagerHtml += '<div class="bx-pager-item"><a href="" data-slide-index="' + i + '" class="bx-pager-link">' + linkContent + '</a></div>';
+                pagerHtml += '<div class="bx-pager-item"><a href="" data-slide-index' +
+
+                    '' +
+                    '' +
+                    '="' + i + '" class="bx-pager-link">' + linkContent + '</a></div>';
             }
             ;
             // populate the pager element with pager links

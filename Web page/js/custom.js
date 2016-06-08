@@ -8,14 +8,68 @@ $(window).load(function(){
 
 $(document).ready(function() {
 
+
   /* Hide mobile menu after clicking on a link
     -----------------------------------------------*/
     $('.navbar-collapse a').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
 
+    $('#SendMessage').click(function() {
 
+        var email = document.getElementsByName("email")[0].value;
+        var userName = document.getElementsByName("name")[0].value;
+        var userText = document.getElementsByName("message")[0].value;
+        if (email === "" || userName === "" || userText === "") {
+            showMeassage("Fill in name email  and text.");
+            return false;
+        }
+        if (checkEmail(email)!==true) {
+            showMeassage("Please enter valid email address");
+            return false;
+        } else if (checkText(userText) !== true) {
+            showMeassage("Message length min 5 characters");
+            return false;
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: "Default.aspx/SendEmail",
+                data: '{name: "' +userName+ '",' + 'email: "' + email+ '",' + 'text: "'+ userText+ '" }',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function() {
+                },
+                failure: function() {
+                }
+            });
+            sended();
+        }
+        return false;
+});
+
+    function checkEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    } 
+    function checkText(text) {
+        return text.length>5;
+    }
+
+    function showMeassage(text) {
+        $('#messageBox').modal({backdrop: true});
+        $('#messageBoxText').html(text);
+        setTimeout(function() { $('#messageBox').modal('hide'); }, 3000);
+    }
+    function sended() {
+            showMeassage("email is sended");
+            document.getElementsByName("email")[0].value = "";
+            document.getElementsByName("name")[0].value = "";
+            document.getElementsByName("message")[0].value = "";
+
+    }
   /* jQuery to collapse the navbar on scroll
+
     -----------------------------------------------*/
   $(window).scroll(function() {
       if ($(".navbar").offset().top > 50) {
@@ -26,6 +80,9 @@ $(document).ready(function() {
   });
 
 
+    //Create my sound Button
+    CreateSoundButton();
+    CreateButtons();
   /* BxSlider
     -----------------------------------------------*/
   (function (window, $) {

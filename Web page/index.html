@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-
-	<!-- Template site title
+	 <!-- Template site title
    ================================================== -->
 	<title>Coman Juice</title>
 
@@ -11,9 +10,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="video production company">
 	<meta name="description" content="full-fledged video production company focused on providing animation, film and VR services">
-<!--
-
--->
 	<!-- Bootstrap CSS
    ================================================== -->
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -68,12 +64,8 @@
     ================================================== -->
     <link href="https://plus.google.com/110585886991827563238" rel="publisher"/>
 
-
-
-</head>
-
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
+<!--  Asp net -->
 
 <!-- Preloader section
 ================================================== -->
@@ -89,7 +81,6 @@
 <!-- Navigation section
 ================================================== -->
 <section class="navbar navbar-fixed-top custom-navbar" role="navigation">
-
 	<div class="container">
 		<div class="navbar-header">
 			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -135,12 +126,9 @@
 <div id="home">
     <div class="site-slider">
         <ul class="bxslider">
-
             <li>
             <div class="embed-responsive embed-responsive-16by9">
-                <div id="soundButton">
-                    <img class="buttonImage" src="/images/SoundOn.png" alt="SoundOn" /> 
-                </div>
+                <div id="soundButton"> </div>
                 <div id="player"></div>
             </div>
             </li> 
@@ -154,11 +142,14 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div id="bx-pager">
-                            <a data-slide-index="0" href=""><img src="//i.ytimg.com/vi/PUoLUaeypm8/mqdefault.jpg" alt="thumbnail 1"/></a>
-                            <a data-slide-index="1" href=""><img src="/images/slider/thumb2.jpg" alt="thumbnail 2"/></a>
-                            <a data-slide-index="2" href=""><img src="/images/slider/thumb3.jpg" alt="thumbnail 3"/></a>
-                            <a data-slide-index="3" href=""><img src="/images/slider/thumb4.jpg" alt="thumbnail 4"/></a>
-                            <a data-slide-index="4" href=""><img src="/images/slider/thumb5.jpg" alt="thumbnail 5"/></a>
+<!--                            Dima Option-->
+<!--                            <a class="slide-Image"  data-slide-index="0" href="" style="background: url(//i.ytimg.com/vi/PUoLUaeypm8/hqdefault.jpg) center no-repeat;"></a>-->
+                            <a data-slide-index="0"></a>
+                            <a data-slide-index="1"></a>
+                            <a data-slide-index="2"></a>
+                            <a data-slide-index="3"></a>
+                            <a data-slide-index="4"></a>
+
                         </div>
                     </div>
                 </div>
@@ -294,7 +285,7 @@
                             <li>Soundtrack</li>
                         </ul>
                         <div  class="plan-button">
-                            <button  class="btn btn-default">CHOOSE PLAN</button>
+                            <button class="btn btn-default" id="btnNew">CHOOSE PLAN</button>
                         </div>
                     </div>
                 </div>
@@ -314,7 +305,7 @@
                             
                         </ul>
                         <div class="plan-button">
-                            <button class="btn btn-default">CHOOSE PLAN</button>
+                            <button class="btn btn-default" id="btnMid">CHOOSE PLAN</button>
                         </div>
                     </div>
                 </div>
@@ -333,7 +324,7 @@
                             <li>any 3 items from Proficient Services</li>
                         </ul>
                         <div class="plan-button">
-                            <button class="btn btn-default">CHOOSE PLAN</button>
+                            <button class="btn btn-default" id="btnPro">CHOOSE PLAN</button>
                         </div>
                     </div>
                 </div>
@@ -346,7 +337,6 @@
 <section id="portfolio" class="parallax-section">
 	<div class="container">
 		<div class="row">
-
 			<!-- Section title
 			================================================== -->
 		    <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
@@ -388,6 +378,19 @@
 		            </figure>
 		        </div>
 		    </div>
+		    <div class="col-md-4 col-sm-6">
+		        <div class="grid">
+		            <figure class="effect-zoe">
+		                <img src="/images/gallery-img/Elementary/Soundtrack.jpg" alt="portfolio img"/>
+		                <figcaption>
+		                    <h2>Soundtrack</h2>
+		                    <p class="icon-links">
+		                        <a href="/images/gallery-img/Elementary/Soundtrack.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+		                    </p>
+		                </figcaption>
+		            </figure>
+		        </div>
+		    </div>
             <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8"><h5 class="wow bounceIn">BASIC</h5></div>
 
                 <div class="col-md-4 col-sm-6">
@@ -405,19 +408,6 @@
 
                 </div>
 
-		    <div class="col-md-4 col-sm-6">
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/gallery-img/Elementary/Soundtrack.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Soundtrack</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/gallery-img/Elementary/Soundtrack.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
 		    <div class="col-md-4 col-sm-6">
 		        <div class="grid">
 		            <figure class="effect-zoe">
@@ -444,19 +434,6 @@
 		            </figure>
 		        </div>
 		    </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="grid">
-                    <figure class="effect-zoe">
-                        <img src="/images/gallery-img/Elementary/UNIQUE SCRIPTING.jpg" alt="portfolio img" />
-                        <figcaption>
-                            <h2>Unique Scripting</h2>
-                            <p class="icon-links">
-                                <a href="/images/gallery-img/Elementary/UNIQUE SCRIPTING.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
 		    <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8"><h5 class="wow bounceIn">ESSENTIAL</h5>
 		    </div>
 
@@ -468,19 +445,6 @@
 		                    <h2>Infographic Elements</h2>
 		                    <p class="icon-links">
 		                        <a href="/images/gallery-img/Essential/Infographic.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                    </p>
-		                </figcaption>
-		            </figure>
-		        </div>
-		    </div>
-		    <div class="col-md-4 col-sm-6">
-		        <div class="grid">
-		            <figure class="effect-zoe">
-		                <img src="/images/gallery-img/Essential/Creative Design.jpg" alt="portfolio img"/>
-		                <figcaption>
-		                    <h2>Creative Design</h2>
-		                    <p class="icon-links">
-		                        <a href="/images/gallery-img/Essential/Creative Design.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
 		                    </p>
 		                </figcaption>
 		            </figure>
@@ -512,19 +476,6 @@
 		            </figure>
 		        </div>
 		    </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="grid">
-                    <figure class="effect-zoe">
-                        <img src="/images/gallery-img/Essential/Live Photo.jpg" alt="portfolio img" />
-                        <figcaption>
-                            <h2>Live Photography</h2>
-                            <p class="icon-links">
-                                <a href="/images/gallery-img/Essential/Live Photo.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
             <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8"><h5 class="wow bounceIn">PROFICIENT</h5></div>
 		<div class="col-md-4 col-sm-6">
 		    <div class="grid">
@@ -563,48 +514,12 @@
 		                </p>
 		            </figcaption>
 		        </figure>
-		    </div>
-		</div>
-		<div class="col-md-4 col-sm-6">
-		    <div class="grid">
-		        <figure class="effect-zoe">
-		            <img src="/images/gallery-img/Proficient/Photo Shooting.jpg" alt="portfolio img"/>
-		            <figcaption>
-		                <h2>Photo Shooting</h2>
-		                <p class="icon-links">
-		                    <a href="/images/gallery-img/Proficient/Photo Shooting.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-		                </p>
-		            </figcaption>
-		        </figure>
-		    </div>
-		</div>
-            <div class="col-md-4 col-sm-6">
-                <div class="grid">
-                    <figure class="effect-zoe">
-                        <img src="/images/gallery-img/Proficient/LiveVideoRecording.jpg" alt="portfolio img" />
-                        <figcaption>
-                            <h2>Live Video Recording</h2>
-                            <p class="icon-links">
-                                <a href="/images/gallery-img/Proficient/LiveVideoRecording.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-                <!-- Portfolio bottom section
-        ================================================== -->
-                <!--<div class="col-md-offset-2 col-md-8 col-sm-12">
-            <div class="portfolio-bottom">
-                <h2>INTERESTED?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit 	amet.</p>
-                <a href="#plan" class="smoothScroll btn btn-default">LET'S GO!</a>
-            </div>
-        </div>-->
-
-            </div>
-	</div>
+		     </div>
+    	    </div>
+        </div>
+    </div>
 </section>
+
 
 <!-- Contact section
 ================================================== -->
@@ -631,16 +546,13 @@
 						<input type="text" class="form-control" placeholder="Full Name" name="name">
 					</div>
 					<div class="col-md-4 col-sm-6">
-						<input type="email" class="form-control" placeholder="Email" name="email">
+						<input type="email" class="form-control" placeholder="Email" name="email" >
 					</div>
-					<!--<div class="col-md-4 col-sm-12">
-						<input type="text" class="form-control" placeholder="Subject" name="subject">
-					</div>-->
 					<div class="col-md-12 col-sm-12">
-						<textarea class="form-control" placeholder="Message" rows="7" name="message"></textarea>
+						<textarea class="form-control" placeholder="Message" rows="7" name="message" ></textarea>
 					</div>
 					<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
-						<input type="submit" class="form-control" value="SEND MESSAGE">
+						<input  type="submit" class="form-control" value="SEND MESSAGE" id="SendMessage">
 					</div>
 				</form>
 			</div>
@@ -650,7 +562,7 @@
 			<div class="contact-detail col-md-12 col-sm-12">
 				<div class="col-md-6 col-sm-6">
 					<h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i>SEND E-MAIL</h3>
-					<p>coman.games@outlook.com</p>
+					<p>coman.juice@gmail.com</p>
 				</div>
 				<div class="col-md-6 col-sm-6">
 					<h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i>CALL US</h3>
@@ -661,6 +573,25 @@
 		</div>
 	</div>
 </section>
+<!--Message box of Contact us-->
+    <div class="modal fade" id="messageBox" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Message</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="messageBoxText">Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 <!-- Footer section
@@ -679,20 +610,18 @@
                    
 				</ul>
 				<p>Copyright &copy; 2016 COMAN JUICE 
-                
-                <!--| Design: <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></p>-->
-
 			</div>
 		</div>
 	</div>
 </footer>
 
-
 <!-- Javascript 
 ================================================== -->
 <!-- Language settings-->
+<script src="/js/MessageText.js"></script>
 <script src="/js/languageRedirecting.js"></script>
 <script>CheckLanguage('en')</script>
+<script src="/js/SoundController.js"></script>
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/smoothscroll.js"></script>
