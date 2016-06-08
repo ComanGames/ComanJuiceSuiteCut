@@ -1,14 +1,14 @@
-﻿var enElementray =  "Hello I want to order elemtnery type";
-var enAdvenced =    "Hello I want to order Advenced type";
-var enPro =         "Hello I want to order proficent type";
+﻿var enElementray =  "Hello there. I would like to order Elementary Plan";
+var enAdvenced = "Hello there. I would like to order Advanced Plan";
+var enPro = "Hello there. I would like to make an order Proficient Plan";
 
-var ruElementray =  "Добрый день I want to order elemtnery type";
-var ruAdvenced =    "Добрый день I want to order Advenced type";
-var ruPro =         "Добрый день I want to order proficent type";
+var ruElementray =  "Добрый день. Я хочу заказать план типа \"НОВИЧОК\"";
+var ruAdvenced = "Добрый день. Я хочу заказать план типа \"СПЕЦИАЛИСТ\"";
+var ruPro = "Добрый день. Я хочу заказать план типа \"ЭКСПЕРТ\"";
 
-var ukElementray =  "Доброго дня I want to order elemtnery type";
-var ukAdvenced =    "Доброго дня I want to order Advenced type";
-var ukPro =         "Доброго дня I want to order proficent type";
+var ukElementray =  "Добрий день. Я хочу замовити план типу \"НОВАЧОК\"";
+var ukAdvenced = "Добрий день. Я хочу замовити план типу \"СПЕЦІАЛІСТ\"";
+var ukPro = "Добрий день. Я хочу замовити план типу \"ЕКСПЕРТ\"";
 
 function CreateButtons() {
     var buttonNew = document.getElementById("btnNew");
