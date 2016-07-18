@@ -64,7 +64,7 @@ function changeImage() {
 }
 
 function RemoveThumbnailImage() {
-    if (thumnailImage != null && typeof (thumnailImage) != 'undefined') {
+    if (thumnailImage !== null && typeof (thumnailImage) !== 'undefined') {
         playVideo();
     setTimeout(function() {
             var player = document.getElementById('player');
@@ -76,7 +76,7 @@ function RemoveThumbnailImage() {
 }
 
 function setMute(isOn) {
-    if (player == null)
+    if (player === null)
         return;
     if (isOn) {
         player.setVolume(50);
