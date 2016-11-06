@@ -15,6 +15,5 @@ public partial class Default : System.Web.UI.Page
         sb.AppendLine(String.Format("Name:\t{0}", name));
         sb.AppendLine(String.Format("E-mial:\t{0}", email));
         sb.AppendLine(String.Format("Text:\n{0}", text));
-        Utilities.SendEmail("Contact Us","coman.juice@webpage.com",sb.ToString());
     }
 }
